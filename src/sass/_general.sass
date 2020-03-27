@@ -1,5 +1,6 @@
 header
     position: relative
+    width: 100%
 .label
     margin: 0 auto
     width: 112px
@@ -62,7 +63,6 @@ header
     &_img
         margin-top: 16px
         width: 285px
-        height: 32px
     &_descr
         color: rgba(255, 255, 255, 0.5)
         font-size: 13px
@@ -74,9 +74,12 @@ header
         font-size: 12px
         font-weight: 300
     &_phone
+        display: block
         margin-top: 8px
+        text-align: right
         color: $white_color
         font-size: 22px
+        line-height: 20px
         font-weight: 400
         text-transform: uppercase
         &:hover

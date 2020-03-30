@@ -170,7 +170,7 @@
             position: absolute
             background-color: rgba(0, 0, 0, 0.85)
             flex-direction: column
-            height: 93vh
+            height: 97vh
             justify-content: space-evenly
             width: 80%
             right: -100%
@@ -223,20 +223,24 @@
     .menu
         height: 30px
         .hamburger
-            width: 20px
+            width: 21px
+            height: 9px
             right: 10px
             span
                 height: 1px
                 margin-bottom: 3px
             &_active
                 span
-                    margin-bottom: -3px
                     &:nth-child(1)
-                        transform: rotate(-45deg) translate(1px,0px)
+                        transform: rotate(-45deg) translate(-2px,3px)
                     &:nth-child(3)
-                        transform: rotate(45deg) translate(2px,1px)
+                        transform: rotate(45deg) translate(0px,0px)
         &_list
             top: 30px
+            padding-bottom: 80px
+        &_link
+            &:hover
+                text-decoration: none
     .logo
         min-height: 90px
         padding-top: 30px
@@ -249,9 +253,12 @@
         &_btn
             margin-top: 6px
             height: 28px
+            max-width: 112px
             width: 85%
             font-size: 10px
             border-radius: 5px
+            &:hover
+                box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
     .promo
         min-height: 400px
         padding: 142px 0 35px 0
@@ -265,9 +272,12 @@
             line-height: 28px
         &_btn
             margin-top: 72px
-            width: 210px
+            max-width: 210px
+            width: 80%
             height: 50px
             font-size: 16px
+            &:hover
+                box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
     .title
         margin-top: 15px
         font-size: 15px
@@ -301,12 +311,22 @@
             box-sizing: padding-box
             margin-bottom: 30px
             max-height: 254px
+            max-width: 320px
             width: 100%
+            &:hover
+                background-color: none
+                .mobile_text
+                    color: $white_color
         &_text
             font-size: 18px
             line-height: 30px
         &_circle
             bottom: 22px
+            &:hover
+                background-color: $black_color
+                cursor: none
+                &::after, &::before
+                    background-color: $first_blue
     .choose
         background: rgb(7, 7, 22)
         padding: 25px 0 31px 0
@@ -374,9 +394,11 @@
             order: 0
             margin-top: 0
         &_mainMenu
-            justify-content: space-between
+            justify-content: space-evenly
             &_link
                 font-size: 14px
+                &:hover
+                    text-decoration: none
         &_submenu
             width: 85%
             margin: 0 auto
@@ -385,11 +407,18 @@
             justify-content: space-between
             &_link
                 font-size: 11px
+                &:hover
+                    text-decoration: none
         &_lang
             margin-top: 13px
+
         &_sociate
             margin-top: 20px
             order: 1
+            a
+                &:hover
+                    color: $white_color
+                    text-decoration: none
         &_app
             margin-top: 20px
             order: 2
